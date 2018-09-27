@@ -1,0 +1,43 @@
+{
+    "name": "ko1a",
+    "version": "1.0.1",
+    "description": "demo",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "panx",
+    "license": "ISC",
+    "dependencies": {
+        "ali-oss": "^5.1.1",
+        "babel-core": "^6.26.3",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-stage-3": "^6.24.1",
+        "crypto": "^1.0.1",
+        "del": "^3.0.0",
+        "gulp-notify": "^3.2.0",
+        "gulp-uglify": "^3.0.0",
+        "koa": "^2.5.0",
+        "koa-body": "^2.5.0",
+        "koa-bodyparser": "^4.2.0",
+        "koa-mysql-session": "0.0.2",
+        "koa-router": "^7.4.0",
+        "koa-session-minimal": "^3.0.4",
+        "koa-static": "^4.0.2",
+        "log4js": "^2.5.3",
+        "merge": "^1.2.0",
+        "multiparty": "^4.1.4",
+        "mysql": "^2.15.0",
+        "node-schedule": "^1.3.0",
+        "node-uuid": "^1.4.8",
+        "node-xlsx": "^0.12.0",
+        "qr-image": "^3.2.0",
+        "redis": "^2.8.0",
+        "request": "^2.85.0",
+        "soap": "^0.24.0",
+        "stream-combiner": "^0.2.2",
+        "svg-captcha": "^1.3.11"
+    }
+}

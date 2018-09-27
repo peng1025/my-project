@@ -1,0 +1,8 @@
+[2018-09-07T10:49:55.205] [ERROR] logControlInfo - /user/addUser异常：tool.rectx is not a function</br>
+[2018-09-07T10:55:13.869] [ERROR] logControlInfo - /role/addRoleWithPermission异常：tool.unique is not a function</br>
+[2018-09-07T10:55:19.374] [ERROR] logControlInfo - /role/addRoleWithPermission异常：tool.unique is not a function</br>
+[2018-09-07T10:56:09.593] [ERROR] logControlInfo - /rolepermission/getallpermission异常：tool.unique is not a function</br>
+[2018-09-07T10:56:16.605] [ERROR] logControlInfo - /rolepermission/getallpermission异常：tool.unique is not a function</br>
+[2018-09-07T10:57:11.987] [ERROR] logControlInfo - /organization/deleteOrganization异常：Cannot read property 'length' of undefined</br>
+[2018-09-07T10:57:17.571] [ERROR] logControlInfo - /organization/deleteOrganization异常：Cannot read property 'length' of undefined</br>
+[2018-09-07T10:58:04.849] [ERROR] logControlInfo - /user/addUser异常：tool.rectx is not a function</br>

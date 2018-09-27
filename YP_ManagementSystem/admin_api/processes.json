@@ -1,0 +1,11 @@
+ {
+     "apps": [{
+         "name": "YP_roleManage",
+         "script": "./bin/www",
+         "instances": 1,
+         "exec_mode": "cluster_mode",
+         "watch": ["restart.txt"],
+         "ignore_watch": ["tmp", "node_modules", "log"],
+         "max_memory_restart": "2000M"
+     }]
+ }

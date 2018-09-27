@@ -1,0 +1,45 @@
+const pagemap = {
+    //组织用户管理页
+    "/api/getrolebyorgid": "/organize",
+    "/api/getallroles": "/organize",
+    "/api/getchildorganizationbyid": "/organize",
+    "/api/getusersbyporgid": "/organize",
+    "/api/getrolebyorgid": "/organize",
+    "/api/addorganization": "/organize",
+    "/api/updateorganization": "/organize",
+    "/api/deleteorganization": "/organize",
+    "/api/adduser": "/organize",
+    "/api/updatestatus": "/organize",
+    "/api/setuserrole": "/organize",
+    "/api/updateorgid": "/organize",
+    "/api/updateuser": "/organize",
+    "/api/deleteuserbyid": "/organize",
+    "/api/getallusersbyporgid": "/organize",
+    //权限管理页
+    "/api/getchildpermissionbyid": "/permissionsmanage",
+    // "/api/updatepermissionstatus": "/permissionsmanage",
+    "/api/updatepermission": "/permissionsmanage",
+    "/api/addpermission": "/permissionsmanage",
+    "/api/getallpermission": "/permissionsmanage",
+    "api/deletepermissionByid": "/permissionsmanage",
+    //角色管理页
+    "/api/getpermissionbyroleid": "/rolemanage",
+    "/api/getallpermission": "/rolemanage",
+    "/api/updaterole": "/rolemanage",
+    "/api/addrolewithpermission": "/rolemanage",
+    "/api/addrole": "/rolemanage",
+    "/api/setrolepermission": "/rolemanage",
+    "/api/deleterole": "/rolemanage",
+    "/api/login": "/rolemanage",
+    "/api/getallrole": "/rolemanage",
+    "/api/getallvalidpermission": "/rolemanage",
+    //员工管理页
+    "/api/getallusersbyporgid": "/usermanage",
+
+    //订单查询
+    "/api/getorderslist": "/ordermanage",
+
+    //短信查询
+    "/api/getsmslist": "/messageinfos"
+}
+module.exports = pagemap;

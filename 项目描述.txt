@@ -1,1 +1,4 @@
-哈哈哈，Git咯
+前端：vue +  H+及Element-ui + vue-router + axios。
+后端：node.js + koa2 + redis + mysql。
+
+实现角色权限管理。

@@ -1,0 +1,16 @@
+module.exports = {
+    addUser: " INSERT INTO t_user(ID,Name,UserName,Password,JobNO,OrgID,Status,IsManage,CreateTime,CreateBy,Deflag) VALUES({ID},{Name},{UserName},{Password},{JobNO},{OrgID},{Status},{IsManage},{CreateTime},{CreateBy},0) ",
+    getUserByID: "select ID,Name,UserName,Password,JobNO,OrgID,Status,IsManage,CreateTime,CreateBy,Deflag from t_user where ID=? and Deflag=0 ",
+    deleteUserByID: " update t_user set Deflag=1 where ID in (?)",
+    updateUser: " update t_user set Name={Name},OrgID={OrgID},Status={Status},IsManage={IsManage},UpdateTime={UpdateTime},UpdateBy={UpdateBy} where ID={ID} and Deflag=0 ",
+    getUsersByPorgID: " select ID,Name,UserName,JobNO,OrgID,Status,IsManage,CreateTime,CreateBy,Deflag  from t_user where Deflag = 0 and OrgID in (?) ",
+    getUserByUserName: "select ID,Name,UserName,JobNO,OrgID,Status,IsManage,CreateTime,CreateBy,Deflag  from t_user where UserName =?  ",
+    getUserByJobNO: "select ID,Name,UserName,JobNO,OrgID,Status,IsManage,CreateTime,CreateBy,Deflag  from t_user where JobNO =?  ",
+    getUserByRoleID: " select b.ID,b.UserName,b.Name,b.OrgID,b.IsManage,b.Status,b.JobNo from t_user_role a left join t_user b on a.UserID=b.ID where a.RoleID = ? and b.Deflag=0 ",
+    updateOrgID: " update t_user set OrgID=? where ID in (?) ",
+    updateStatus: " update t_user set Status=? where ID in (?) ",
+    updatePassword: " update t_user set Password = ? where ID = ? ",
+    getAllUsersByPorgID: " select u.ID,max(u.`Name`) as Name, max(u.UserName) as UserName, max(u.OrgID) as OrgID, max(u.LastLoginTime ) as LastLoginTime, max(u.Mobile ) as Mobile,max(u.IsManage ) as IsManage,  max(u.LoginCount) as LoginCount, max(u.CreateTime) as CreateTime, max(u.CreateBy) as CreateBy, max(u.Deflag) as Deflag, max(u.Status) as Status, max(u.JobNO) as JobNO, max(u.UpdateTime) as UpdateTime, max(u.UpdateBy) as UpdateBy,GROUP_CONCAT(r.`Name`) as RoleNames, GROUP_CONCAT(r.ID) as RoleIds, max(o.`Name`) as OrgName from t_user u left join t_organization o on u.OrgID = o.ID left join t_user_role ur on u.ID = ur.UserID left join t_role r on ur.RoleID = r.ID where u.Deflag = 0 and u.orgid in ({orgid}) and ((ifnull({name}, '') = '' or u.name = {name})) and((ifnull({ismanage}, '') = '' or u.ismanage = {ismanage})) and((ifnull({username}, '') = '' or u.username = {username})) and((ifnull({jobno}, '') = '' or u.jobno = {jobno})) and((ifnull({status}, '') = '' or u.status = {status})) GROUP BY u.ID order by u.CreateTime limit {start}, {size};select count(1) as count from(select count(1) as count from t_user u left join t_organization o on u.OrgID = o.ID  left join t_user_role ur on u.ID = ur.UserID left join t_role r on ur.RoleID = r.ID where u.Deflag = 0 and u.orgid in ({orgid}) and ((ifnull({name}, '') = '' or u.name = {name})) and((ifnull({ismanage}, '') = '' or u.ismanage = {ismanage})) and((ifnull({username}, '') = '' or u.username = {username})) and((ifnull({jobno}, '') = '' or u.jobno = {jobno})) and((ifnull({status}, '') = '' or u.status = {status})) GROUP BY u.ID ) t "
+
+
+}

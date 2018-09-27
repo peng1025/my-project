@@ -1,0 +1,4 @@
+1
+
+重要提醒：
+（1）框架用到了koa-mysql-session，但上线的时候是没有建表的权限的，所以index.js中， CREATE_STATEMENT 的值得修改为= 'select 1;', //第三方引用，不能执行

@@ -1,0 +1,43 @@
+import env from './env.cnf';
+var merge = require('merge')
+//const query = require('./env.cnf');
+const config = {
+    redis: {
+
+        table: {
+            permission: {
+                code: 'YP_permission1',
+                expire: 60 * 60 * 24
+            },
+            allPermission: {
+                code: 'YP_allPermission1',
+                expire: 60 * 60 * 8
+            },
+            token: {
+                code: 'YP_token1', //根据项目去取名，避免多个项目共用一个redis服务器，表名重复
+                expire: 5000
+            }, //单位为秒
+            errTime: {
+                code: 'YP_errTime1', //根据项目去取名，避免多个项目共用一个redis服务器，表名重复
+                expire: 60 * 60 * 1
+            },
+            smsCheckCode: {
+                code: 'YP_smsCheckCode1', //根据项目去取名，避免多个项目共用一个redis服务器，表名重复
+                expire: 60 * 60 * 1
+            }
+        }
+    },
+    log: {
+        debug: false
+    },
+    targetUrl: "http://10.14.18.102:3000/verification.html",
+    sinaShortUrl: "http://api.t.sina.com.cn/short_url/shorten.json?source=3271760578&url_long={url}",
+    suoShortUrl: "http://suo.im/api.php?format=json&url={url}",
+
+
+    ExcuteCount: 100,//定时任务发短信每次处理订单数,
+    checkCodeType: "captcha"//验证码类型
+}
+
+
+module.exports = merge.recursive(true, config, env);
